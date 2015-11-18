@@ -1,0 +1,23 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Nov 06 11:40:46 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led<0>" LOCATE = SITE "P105" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "P104" LEVEL 1;
+COMP "clk" LOCATE = SITE "P85" LEVEL 1;
+COMP "botao<0>" LOCATE = SITE "P101" LEVEL 1;
+COMP "botao<1>" LOCATE = SITE "P102" LEVEL 1;
+TIMEGRP clk50_grp = BEL "s_count_0" BEL "s_count_1" BEL "s_count_2" BEL
+        "s_count_3" BEL "s_count_4" BEL "s_count_5" BEL "s_count_6" BEL
+        "s_count_7" BEL "s_count_8" BEL "s_count_9" BEL "s_count_10" BEL
+        "s_count_11" BEL "s_count_12" BEL "s_count_13" BEL "s_count_14" BEL
+        "s_count_15" BEL "s_count_16" BEL "s_count_17" BEL "s_count_18" BEL
+        "s_count_19" BEL "s_count_20" BEL "s_count_21" BEL "s_count_22" BEL
+        "s_count_23" BEL "s_count_24" BEL "s_count_25" BEL "s_count_26" BEL
+        "s_count_27" BEL "s_count_28" BEL "s_led_0" BEL "s_led_1" BEL
+        "s_estado_FSM_FFd3" BEL "s_estado_FSM_FFd4" BEL "s_estado_FSM_FFd2"
+        BEL "s_estado_FSM_FFd1" BEL "clk_BUFGP/BUFG";
+TS_PER_CLK50 = PERIOD TIMEGRP "clk50_grp" 20 ns HIGH 50%;
+SCHEMATIC END;
+
